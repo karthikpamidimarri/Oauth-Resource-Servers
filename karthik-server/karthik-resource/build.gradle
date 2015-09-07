@@ -1,0 +1,41 @@
+buildscript {
+    repositories {
+        maven {
+            url "http://repo.spring.io/libs-release"
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE")
+    }
+}
+apply plugin: 'spring-boot'
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+  
+    //OAuth
+    compile("org.springframework.security.oauth:spring-security-oauth2:2.0.5.RELEASE")
+
+    //Database driver
+    //compile("org.xerial:sqlite-jdbc:3.7.2")
+	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.30'
+	compile('org.apache.commons:commons-lang3:3.0')
+    
+    compile "org.ajar:swagger-spring-mvc-ui:0.4"
+	compile('com.wordnik:swagger-core_2.9.1:1.1-SNAPSHOT.120119') 
+	compile('com.github.pjagielski.spring-boot-swagger:spring-boot-swagger:0.1')
+	compile(group: 'com.mangofactory', name: 'swagger-springmvc', version: '0.9.5') {
+        exclude(module: 'jackson-module-scala_2.10')
+        exclude(module: 'scalap')
+        exclude(module: 'scala-compiler')
+    }
+    compile project(":karthik-commons")
+}

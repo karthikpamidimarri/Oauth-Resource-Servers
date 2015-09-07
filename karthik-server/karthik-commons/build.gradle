@@ -1,0 +1,38 @@
+buildscript {
+	repositories {
+		mavenCentral()
+		maven { url "https://repo.spring.io/plugins-release" }
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: "spring-boot"
+
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/libs-release" }
+	maven {url "http://oss.jfrog.org/artifactory/oss-release-local"}
+	jcenter()
+}
+
+dependencies {
+   compile("org.springframework.boot:spring-boot-starter")
+	compile("org.springframework.boot:spring-boot-starter-web")
+	compile("org.springframework.boot:spring-boot-starter-security")
+	compile("org.springframework.boot:spring-boot-starter-data-jpa")
+  	//compile 'com.h2database:h2:1.4.184'
+  
+    compile("com.fasterxml.jackson.core:jackson-databind")
+    compile 'org.jadira.usertype:usertype.core:3.2.0.GA'
+     compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-joda', version: '2.3.3'
+	 compile group: 'joda-time', name: 'joda-time', version: 2.3
+     compile group: 'joda-time', name: 'joda-time-hibernate', version: 1.3
+      
+}
