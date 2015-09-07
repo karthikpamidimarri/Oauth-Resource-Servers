@@ -1,0 +1,2 @@
+rootProject.name = 'karthik-client'
+include 'karthik-commons','karthik-resource','karthik-auth'
