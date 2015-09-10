@@ -44,7 +44,7 @@ public class OAuthConfiguration extends ResourceServerConfigurerAdapter {
                 .antMatchers(HttpMethod.PATCH, "/**").access("#oauth2.hasScope('write')")
                 .antMatchers(HttpMethod.PUT, "/**").access("#oauth2.hasScope('write')")
                 .antMatchers(HttpMethod.DELETE, "/**").access("#oauth2.hasScope('write')")
-        .and()
+        /*.and()
             // Add headers required for CORS requests.
             .headers().addHeaderWriter((request, response) -> {
                 response.addHeader("Access-Control-Allow-Origin", "*");
@@ -52,6 +52,6 @@ public class OAuthConfiguration extends ResourceServerConfigurerAdapter {
                     response.setHeader("Access-Control-Allow-Methods", request.getHeader("Access-Control-Request-Method"));
                     response.setHeader("Access-Control-Allow-Headers", request.getHeader("Access-Control-Request-Headers"));
                 }
-            });
+            })*/;
     }
 }

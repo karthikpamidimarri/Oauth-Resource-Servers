@@ -29,7 +29,7 @@ dependencies {
 	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.30'
 	compile('org.apache.commons:commons-lang3:3.0')
     
-    compile "org.ajar:swagger-spring-mvc-ui:0.4"
+    //compile "org.ajar:swagger-spring-mvc-ui:0.4"
 	compile('com.wordnik:swagger-core_2.9.1:1.1-SNAPSHOT.120119') 
 	compile('com.github.pjagielski.spring-boot-swagger:spring-boot-swagger:0.1')
 	compile(group: 'com.mangofactory', name: 'swagger-springmvc', version: '0.9.5') {
